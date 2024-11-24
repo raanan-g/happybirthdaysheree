@@ -19,6 +19,37 @@
     <div id='legend'></div>
     <script src='config.js'></script>
     <script type='text/javascript' src="map.js"></script>
+    <script type='text/javascript'>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Add event listener to all inputs
+            document.querySelectorAll("input").forEach(input => {
+                input.addEventListener("input", (event) => {
+                    const currentInput = event.target;
+                    const password = currentInput.id; // The correct password is the ID of the input
+                    const nextId = currentInput.getAttribute("next"); // ID of the next element to reveal
+
+                    if (currentInput.value === password) {
+                        // Reveal the next element
+                        const nextElement = document.getElementById(nextId);
+                        if (nextElement) {
+                            nextElement.style.opacity = 1;
+
+                            // Scroll to the revealed element
+                            nextElement.scrollIntoView({
+                                behavior: "smooth", // Smooth scrolling effect
+                                block: "center"    // Center the element in the viewport
+                            });
+                        }
+
+                        // Optionally, disable the current input to prevent further edits
+                        currentInput.disabled = true;
+                    }
+                });
+            });
+        });
+
+        
+    </script>
 </body>
 
 </html>

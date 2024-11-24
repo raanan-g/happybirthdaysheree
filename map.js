@@ -96,6 +96,7 @@ config.chapters.forEach((record, idx) => {
     /* These first two variables will hold each vignette, the chapter
     element will go in the container element */
     var container = document.createElement('div');
+    container.style.opacity = 0;
     var chapter = document.createElement('div');
     chapter.setAttribute("class","chapter");
     // Creates the title for the vignettes
@@ -198,9 +199,12 @@ map.on("load", function () {
         .onStepEnter(response => {
             var chapter = config.chapters.find(chap => chap.id === response.element.id);
             response.element.classList.add('active');
-            map.flyTo(chapter.location);
-            if (config.showMarkers) {
-                marker.setLngLat(chapter.location.center);
+            if (document.getElementById(chapter.id).style.opacity==1) {
+                map.flyTo(chapter.location);
+                if (config.showMarkers) {
+                    const marker = new mapboxgl.Marker();
+                    marker.setLngLat(chapter.location.center);
+                }
             }
             if (chapter.onChapterEnter.length > 0) {
                 chapter.onChapterEnter.forEach(setLayerOpacity);
