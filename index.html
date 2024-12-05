@@ -28,7 +28,7 @@
                     const password = currentInput.id; // The correct password is the ID of the input
                     const nextId = currentInput.getAttribute("next"); // ID of the next element to reveal
 
-                    if (currentInput.value === password) {
+                    if (currentInput.value.toLowerCase() === password.toLowerCase()) {
                         // Reveal the next element
                         const nextElement = document.getElementById(nextId);
                         if (nextElement) {

@@ -12,7 +12,9 @@ var config = {
     <p>The scavenger hunt has four locations with a special surprise at each stop, along with a hint to the password that unlocks the next location.</p>
     <p><b>The first hint</b> is the day of the week that we first met. Type the password in below and you'll be able to scroll to the first location.</p>
     <p>I hope you have an amazing day!</p>
-    <input id='thursday' next='id0' placeholder='Enter the password here...'></input>`,
+    <input id='thursday' next='id0' placeholder='Enter the password here...'></input>
+    <br><br>
+    <small onclick='this.innerText = "thursday";'>click here to reveal the password</small>`,
     chapters: [
       // intro
         {
@@ -26,9 +28,11 @@ var config = {
             <p>I love you so so so much</p>
             <h4>Hint:</h4>
             <p>What is the Sanscrit word for "love" or "affection" that is often associated with universal compassion in yoga philosophy?</p>
-             <input id='prema' next='id1' placeholder='Enter the password here...'></input>`,
+             <input id='prema' next='id1' placeholder='Enter the password here...'></input>
+             <br><br>
+             <small onclick='this.innerText = "prema";'>click here to reveal the password</small>`,
             location: {
-                center: [73.990477, 15.036685],
+                center: [73.92700357828012, 15.098811410049244],
                 zoom: 19.30,
                 pitch: 61.54,
                 bearing: -82.40
@@ -48,7 +52,9 @@ var config = {
             <p>Enjoy a lovely brunch meal on me at the beautiful <a href='https://maps.app.goo.gl/KyuXf31bKPHj673c8' target='_blank'>Zest Vegan and Vegetarian Restaurant</a> in Agonda.</p>
             <h4>Hint:</h4>
             <p>Think back to our first brunch together and find what we ordered on the menu. The first ingredient that's not tofu/eggs is the password to unlock your next location.</p> 
-            <input id='mushrooms' next='id2' placeholder='Enter the password here...'></input>`,
+            <input id='mushrooms' next='id2' placeholder='Enter the password here...'></input>
+            <br><br>
+            <small onclick='this.innerText = "mushrooms";'>click here to reveal the password</small>`,
             location: {
                 center: [73.98925723057404, 15.03925197318239],
                 zoom: 18.30,
@@ -64,12 +70,15 @@ var config = {
             id: 'id2',
             title: 'I hope you enjoyed your meal!',
             image: '',
-            imageCredit: '<a href="https://maps.app.goo.gl/KyuXf31bKPHj673c8" target="_blank">Zest Agonda</a>',
+            imageCredit: '<a href="https://maps.app.goo.gl/YbZwyHTvQ7MQuq4q9" target="_blank">Farooq Jewellers</a>',
             description: `
-            <p>Now that you've had a little something to eat, time to head to your next destination. Grab a taxi to ...</p> 
-            <input id='password' next='id3' placeholder='Password...'></input>`,
+            <p>Now that you've had a little something to eat, time to head to your next destination. Make your way down the street to Farooq Jewellers to pick out a ring or any other piece of jewellery that you like, also on me.</p> 
+            <p>Across the street there's a 2-star hotel on the beach that's named after a country in the Carribbean. The name of that country is the password to unlock your next destination.</p> 
+            <input id='cuba' next='id3' placeholder='Password...'></input>
+            <br><br>
+            <small onclick='this.innerText = "cuba";'>click here to reveal the password</small>`,
             location: {
-                center: [73.98925723057404, 15.03925197318239],
+                center: [73.9896257120608, 15.037374788772572],
                 zoom: 18.30,
                 pitch: 61.54,
                 bearing: -82.40,
@@ -82,18 +91,20 @@ var config = {
         {
             id: 'id3',
             title: 'Congratulations, you unlocked your final destination!',
-            image: 'hotelroom.png',
-            imageCredit: '',
+            image: 'waterfall.png',
+            imageCredit: '<a href="https://maps.app.goo.gl/aZ43ti4A1Uz2ZKkF9" target="_blank">Shiva Waterfall</a>',
             description: `
-            <p>Grab a taxi to <a href='https://maps.app.goo.gl/CoZLvL5bmF94r9Co8' target='_blank'>The Cape Goa</a>.</p> 
-            <p>This will be your luxurious home your special night. Just walk in to the front desk and check in under your own name. They are waiting for you!</p>
-            <p>I hope you had fun on this scavenger hunt and I hope you have an amazing night of pampering and luxury, my treat.</p>
-            <p>And once again, happy birthday! I love you so much!</p>
+            <p>Since I assume you left your stuff at the hotel, it's time to head back up in that direction. But there's something special near the hotel where you can go to take in Goa's natural beauty before you leave.</p>
+            <p>Grab a taxi back up to Gonval and follow the road by your hotel (I think it's called Canaguinim) toward Cabo de Rama fort. There should be a trail leading you to the waterfall, with some lovely views of the ocean.</p>
+            <p>Be careful on the trail! Looks like some of the rocks might be slippery</p>
+            <p>I hope you had an amazing stay at The Cape and that you had fun on this scavenger hunt.</p>
+            <p>Happy birthday, safe travels, and I can't wait to see you when you're back in Brooklyn!</p>
+            <p>I love you so much!</p>
             <p>&#9829; Raanan</p>
             <img src='lovers.png'>
             `,
             location: {
-                center: [73.92700357828012, 15.098811410049244],
+                center: [73.9239697, 15.0918457],
                 zoom: 18.30,
                 pitch: 61.54,
                 bearing: -82.40,
